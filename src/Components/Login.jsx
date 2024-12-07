@@ -13,7 +13,7 @@ function Login({ setIsLoggedIn, isLoggedIn }) {
         axios.post("https://server-nhjd.onrender.com/login", { email, password }, { withCredentials: true })
             .then(result => {
                 if (result.data === "Success") {
-                    axios.get("https://server-nhjd.onrender.com/users", { withCredentials: true })
+                    axios.get("https://server-nhjd.onrender.com/user", { withCredentials: true })
                         .then(response => {
                             if (response.data.user) {
                               setIsLoggedIn(true);
