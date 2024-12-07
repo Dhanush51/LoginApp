@@ -17,7 +17,7 @@ function Login({ setIsLoggedIn, isLoggedIn }) {
                         .then(response => {
                             if (response.data.user) {
                               setIsLoggedIn(true);
-                              alert("Hello "+response.data.user});
+                              alert("Hello "+response.data.user);
                             }
                         });
                 } 
