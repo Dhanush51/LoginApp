@@ -10,7 +10,7 @@ function Home() {
 
     useEffect(() => {
         if (!user) {
-            axios.get("https://server-nhjd.onrender.com/users", { withCredentials: true })
+            axios.get("https://server-nhjd.onrender.com/user", { withCredentials: true })
                 .then(response => {
                     if (response.data.user) {
                         setUser(response.data.user);
