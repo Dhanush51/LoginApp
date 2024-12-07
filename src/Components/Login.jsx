@@ -12,7 +12,7 @@ function Login({ setIsLoggedIn, isLoggedIn }) {
         e.preventDefault();
         axios.post("https://server-nhjd.onrender.com/login", { email, password }, { withCredentials: true })
             .then(result => {
-                if (result.data === "Success") {
+                if (result.status === "200") {
                     axios.get("https://server-nhjd.onrender.com/user", { withCredentials: true })
                         .then(response => {
                             if (response.data.user) {
